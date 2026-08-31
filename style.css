@@ -12,7 +12,10 @@
 
 *{ box-sizing: border-box; margin:0; padding:0; }
 
-html{ scroll-behavior: smooth; }
+html{ 
+    scroll-behavior: smooth; 
+    height: 100%;
+}
 
 body{
 background: var(--black);
@@ -20,6 +23,9 @@ color: var(--parchment);
 font-family: 'Inter', sans-serif;
 line-height: 1.5;
 overflow-x: hidden;
+display: flex;
+flex-direction: column;
+min-height: 100vh;
 }
 
 h1, h2, h3, .display{
@@ -304,6 +310,46 @@ padding-bottom: 16px;
 .schedule-row .desc span{ color: var(--grey-text); font-size: 0.85rem; }
 .schedule-row .level, .schedule-row .time .room{ font-size: 0.82rem; color: var(--grey-text); }
 
+/* ---------- NEWS ---------- */
+.news-grid{
+display: grid;
+/* grid-template-columns: repeat(3, 1fr); */
+gap: 1px;
+background: var(--line);
+border: 1px solid var(--line);
+}
+
+.news-card{
+background: var(--charcoal);
+padding: 44px 36px;
+transition: background 0.25s ease;
+}
+.news-card:hover{ background: var(--surface); }
+
+.news-rank{
+font-size: 0.72rem;
+color: var(--gold-dim);
+margin-bottom: 22px;
+}
+
+.news-card h3{
+font-size: 1.4rem;
+margin-bottom: 14px;
+color: var(--gold-bright);
+}
+.news-card p{
+color: var(--grey-text);
+font-size: 0.92rem;
+}
+
+#article {
+    flex: 1 0 auto;
+}
+
+.hidden-news {
+    display: none;
+}
+
 /* ---------- QUOTE / CTA STRIP ---------- */
 .strip{
 text-align: center;
@@ -355,6 +401,12 @@ gap: 30px;
     gap: 20px;
 }
 .footer-social img { display: block; }
+
+/* ---------- ARTICLES ------------ */
+.article-content {
+    margin-top: 4vh;
+    /* padding-top: 8vh; */
+}
 
 /* ---------- RESPONSIVE ---------- */
 @media (max-width: 860px){

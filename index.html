@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-<link rel="icon" type="image/x-icon" href="logo.jpg">
+<link rel="icon" type="image/x-icon" href="images/logo.jpg">
 </head>
 <body>
 
@@ -19,6 +19,7 @@
   <nav class="nav-links">
     <ul>
       <li><a href="#schedule">Schedule</a></li>
+      <li><a href="#news">News</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#contact">Contact</a></li>
       <li><a href="cucc2027">CUCC 2027</a></li>
@@ -51,15 +52,15 @@
 <section id="schedule">
   <div class="section-head">
     <div>
-      <span class="eyebrow mono">This week</span>
-      <h2>Club schedule</h2>
+      <span class="eyebrow mono">This Term</span>
+      <h2>Club Schedule</h2>
     </div>
-    <!-- <p>Everyone is welcome! Boards will be provided.</p> -->
+    <p>Everyone is welcome! Boards will be provided.</p>
   </div>
-  <h3>Meetings are done for the term. See you all in the Fall!</h3>
+  <!-- <h3>Meetings are done for the term. See you all in the Fall!</h3> -->
   <!-- <h3>Meetings are done for the term. See you all in the Winter!</h3> -->
   <!-- <h3>Meetings are done for the term. See you all in the Spring!</h3> -->
-  <!-- <div class="schedule">
+  <div class="schedule">
     <div class="schedule-row head mono club">
       <div>Day</div><div>Session</div><div>Level</div><div>Time</div><div>Room</div>
     </div>
@@ -72,39 +73,56 @@
     </div>
     <div class="schedule-row club">
       <div class="day mono">Thu</div>
-      <div class="desc"><h4>U500 Lessons</h4><span><a href="https://wusa.ca/product/summer-chess-lessons-term-pass/">Term Pass</a>  —  <a href="https://wusa.ca/series/summer-2026-weekly-chess-lessons/">Session Pass</a></span></div>
+      <!-- <div class="desc"><h4>U500 Lessons</h4><span><a href="https://wusa.ca/product/summer-chess-lessons-term-pass/">Term Pass</a>  —  <a href="https://wusa.ca/series/summer-2026-weekly-chess-lessons/">Session Pass</a></span></div> -->
+      <div class="desc"><h4>U500 Lessons</h4><span>Passes Available Soon</span></div>
       <div class="level">Starter</div>
       <div class="time">6:30 – 7:30 pm</div>
       <div class="room">MC 4042</div>
     </div>
     <div class="schedule-row club">
       <div class="day mono">Thu</div>
-      <div class="desc"><h4>U1000 Lessons</h4><span><a href="https://wusa.ca/product/summer-chess-lessons-term-pass/">Term Pass</a>  —  <a href="https://wusa.ca/series/summer-2026-weekly-chess-lessons/">Session Pass</a></span></div>
+      <!-- <div class="desc"><h4>U1000 Lessons</h4><span><a href="https://wusa.ca/product/summer-chess-lessons-term-pass/">Term Pass</a>  —  <a href="https://wusa.ca/series/summer-2026-weekly-chess-lessons/">Session Pass</a></span></div> -->
+      <div class="desc"><h4>U1000 Lessons</h4><span>Passes Available Soon</span></div>
       <div class="level">Beginner</div>
       <div class="time">6:30 – 7:30 pm</div>
-      <div class="room">MC 4041</div>
+      <div class="room">MC 4040</div>
     </div>
     <div class="schedule-row club">
       <div class="day mono">Thu</div>
-      <div class="desc"><h4>U1500 Lessons</h4><span><a href="https://wusa.ca/product/summer-chess-lessons-term-pass/">Term Pass</a>  —  <a href="https://wusa.ca/series/summer-2026-weekly-chess-lessons/">Session Pass</a></span></div>
+      <!-- <div class="desc"><h4>U1500 Lessons</h4><span><a href="https://wusa.ca/product/summer-chess-lessons-term-pass/">Term Pass</a>  —  <a href="https://wusa.ca/series/summer-2026-weekly-chess-lessons/">Session Pass</a></span></div> -->
+      <div class="desc"><h4>U1500 Lessons</h4><span>Passes Available Soon</span></div>
       <div class="level">Intermediate</div>
       <div class="time">7:30 – 8:30 pm</div>
       <div class="room">MC 4042</div>
     </div>
     <div class="schedule-row club">
       <div class="day mono">Thu</div>
-      <div class="desc"><h4>U2000 Lessons</h4><span><a href="https://wusa.ca/product/summer-chess-lessons-term-pass/">Term Pass</a>  —  <a href="https://wusa.ca/series/summer-2026-weekly-chess-lessons/">Session Pass</a></span></div>
+      <!-- <div class="desc"><h4>U2000 Lessons</h4><span><a href="https://wusa.ca/product/summer-chess-lessons-term-pass/">Term Pass</a>  —  <a href="https://wusa.ca/series/summer-2026-weekly-chess-lessons/">Session Pass</a></span></div> -->
+      <div class="desc"><h4>U2000 Lessons</h4><span>Passes Available Soon</span></div>
       <div class="level">Advanced</div>
       <div class="time">7:30 – 8:30 pm</div>
-      <div class="room">MC 4041</div>
+      <div class="room">MC 4040</div>
     </div>
-  </div> -->
+  </div>
 </section>
+
+<section id="news">
+  <div class="section-head">
+    <div>
+      <h2>News</h2>
+    </div>
+  </div>
+  <div id="news-feed"></div>
+</section>
+<script>
+    const newsCategory = "chessclub";
+</script>
+<script src="script.js"></script>
 
 <section class="strip" id="about">
   <span class="eyebrow mono">About Us</span>
   <h2>History</h2>
-  <p>The University of Waterloo has a rich chess-playing history. Since the university’s foundation in 1957, the Chess Club has been “open to all […] who play or with to learn to play chess”. University yearbooks dating back to 1962 have demonstrated that the Warriors have always had a passion for chess.</p>
+  <p>The University of Waterloo has a rich chess-playing history. Since the university’s foundation in 1957, the Chess Club has been “open to all […] who play or wish to learn to play chess”. University yearbooks dating back to 1962 have demonstrated that the Warriors have always had a passion for chess.</p>
   <h2 style="margin-top: 50px;">Competition</h2>
   <p>In the decades since, the Club has earned recognition on the national stage. The Club consistently fields a team placing at the top of the Canadian University Chess Championship. The UW team even took home the Crown championship in 2018. The Club also prides itself on its enthusiasm for competition, having fielded five teams of five in 2026: the most of any institution. The UW Chess Club is honoured to be hosting the 2027 iteration of this event from January 15-17, 2027.</p>
   <h2 style="margin-top: 50px;">Meetings</h2>
