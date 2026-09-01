@@ -217,6 +217,7 @@ font-size: 1.05rem;
 .hero-actions{
 margin-top: 42px;
 display: flex;
+flex-wrap: wrap;
 gap: 18px;
 }
 
@@ -403,12 +404,51 @@ gap: 30px;
 .footer-social img { display: block; }
 
 /* ---------- ARTICLES ------------ */
-.article-content {
-    margin-top: 4vh;
-    /* padding-top: 8vh; */
+
+#article {
+    position: relative;
+    overflow: hidden;
 }
 
+.article-content {
+    margin-top: 4vh;
+    max-width: 50%;
+    /* padding-top: 8vh; */
+}
+.article-title{
+    max-width: 50%;
+}
+
+.article-decor {
+position: fixed; 
+right: 10% !important;
+top: 50%;
+right: -5%;
+transform: translateY(-50%);
+height: 60vh;
+width: 60vh;
+max-width: 90vw;
+border-radius: 50%;
+object-fit: cover;
+opacity: 0.6;
+pointer-events: none;
+z-index: 0;
+}
+
+/* Make sure the real article content sits above the decorative image */
+#article > *:not(.article-decor) {
+position: relative;
+z-index: 1;
+}
+
+
+
 /* ---------- RESPONSIVE ---------- */
+
+/* Global overflow safety at every size */
+html, body{ max-width: 100%; overflow-x: hidden; }
+img, svg{ max-width: 100%; height: auto; }
+
 @media (max-width: 860px){
 header{ padding: 16px 20px; gap: 14px; }
 .brand-name{ font-size: 1rem; }
@@ -418,11 +458,48 @@ header{ padding: 16px 20px; gap: 14px; }
 .nav-links .cta-btn{ flex-shrink: 0; }
 section{ padding: 80px 6vw; }
 .hero{ padding: 120px 6vw 60px; }
-.knight-mark{ display: none; }
+.knight-mark, .uw-crest{ display: none; }
 .programs-grid{ grid-template-columns: 1fr; }
 .schedule-row{ grid-template-columns: 60px 1fr; }
 .schedule-row .level, .schedule-row .time{ display:none; }
 .coord-side{ display: none; }
+
+/* Article layout can't stay at 50% width once the side image is gone/shrunk */
+.article-content, .article-title{ max-width: 100%; }
+.article-decor{ height: 42vh; width: 42vh; opacity: 0.35; }
+
+footer{ justify-content: center; text-align: center; }
+.footer-contact, .footer-social{ flex-wrap: wrap; }
+}
+
+@media (max-width: 600px){
+header{ padding: 14px 16px; }
+.brand-name{ font-size: 0.92rem; }
+#logo-upload{ width: 36px; height: 36px; }
+nav ul{ gap: 16px; }
+.cta-btn{ padding: 9px 16px; font-size: 0.74rem; }
+
+section{ padding: 64px 5vw; }
+.section-head{ margin-bottom: 40px; }
+.hero{ padding: 110px 5vw 48px; min-height: unset; }
+.hero p{ max-width: 100%; }
+.hero-actions{ gap: 12px; }
+.hero-actions .cta-btn{ flex: 1 1 auto; text-align: center; }
+
+.coord-bottom{ left: 5vw; right: 5vw; }
+
+.program-card, .news-card{ padding: 32px 22px; }
+
+.schedule-row{ grid-template-columns: 1fr; row-gap: 6px; padding: 18px 0; }
+.schedule-row.head{ display: none; }
+.schedule-row .day{ order: -1; }
+
+.article-decor{ opacity: 0.2; height: 34vh; width: 34vh; }
+
+.strip{ padding: 72px 5vw; }
+
+footer{ padding: 48px 5vw 32px; gap: 20px; }
+.footer-links{ flex-wrap: wrap; justify-content: center; gap: 16px 24px; }
 }
 
 /* focus visibility */
