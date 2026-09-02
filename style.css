@@ -236,6 +236,23 @@ opacity: 0.9;
     top: 50%;
     transform: translateY(-50%);
 }
+.cucc-logo{
+    position: absolute;
+    /* right: 6vw;
+    top: 50%;
+    transform: translateY(-50%); */
+
+    right: 10% !important;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 60vh;
+    width: 60vh;
+    max-width: 90vw;
+    object-fit: cover;
+    /* opacity: 0.6; */
+    pointer-events: none;
+    z-index: 0;
+}
 
 /* ---------- SECTION SHARED ---------- */
 section{
@@ -428,7 +445,7 @@ transform: translateY(-50%);
 height: 60vh;
 width: 60vh;
 max-width: 90vw;
-border-radius: 50%;
+/* border-radius: 50%; */
 object-fit: cover;
 opacity: 0.6;
 pointer-events: none;
